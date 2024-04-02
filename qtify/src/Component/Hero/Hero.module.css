@@ -1,2 +1,11 @@
 .hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  align-items: center;
+  background-color: black;
+  color: var(--color-white);
 }
