@@ -17,3 +17,9 @@ code {
   --color-black: #121212;
   --color-white: #ffffff;
 }
+.swiper-wrapper {
+  display: flex !important;
+}
+.swiper-slide {
+  width: unset !important;
+}

@@ -21,19 +21,23 @@ function Carousel({ data, renderComponent }) {
   return (
     <div className={styles.wrapper}>
       <Swiper
-        style={{ padding: "0px 20px" }}
+        // style={{ padding: "0px 20px" }}
         initialSlide={0}
         modules={[Navigation]}
         slidesPreview={"auto"}
+        slidesPerView={3}
+        // navigation={true}
         spaceBetween={40}
         allowTouchMove
       >
         <Controls data={data} />
         <CarouselLeftNavigation />
         <CarouselRightNavigation />
-        {data.map((ele) => (
-          <SwiperSlide>{renderComponent(ele)}</SwiperSlide>
-        ))}
+        <div style={{ display: "flex" }}>
+          {data.map((ele) => (
+            <SwiperSlide>{renderComponent(ele)}</SwiperSlide>
+          ))}
+        </div>
       </Swiper>
     </div>
   );
